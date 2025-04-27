@@ -1,13 +1,13 @@
 {
-    "property_address": "123 Main St, Dallas, TX 75201",
+    "property_address": "1000 chuckwa dr, durant, ok 74701",
     "year_built": 1985,
     "number_of_units": 24,
     "occupancy_rate": 92,
-    "asking_price": 2400000,
-    "population_growth": "5%",
+    "asking_price": 1900000,
+    "population_growth": "",
     "job_growth": null,
     "crime_rate_index": null,
-    "school_rating": "6",
+    "school_rating": "",
     "market_cap_rate": null,
     "recent_sales_comps": null,
     "market_rent": null

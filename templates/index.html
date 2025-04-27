@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Analysis</title>
+</head>
+<body>
+    <h1>Property Analysis</h1>
+    <form action="/analyze" method="post">
+        <label for="property_address">Property Address:</label>
+        <input type="text" id="property_address" name="property_address" required><br>
+
+        <label for="year_built">Year Built:</label>
+        <input type="number" id="year_built" name="year_built" required><br>
+
+        <label for="number_of_units">Number of Units:</label>
+        <input type="number" id="number_of_units" name="number_of_units" required><br>
+
+        <label for="occupancy_rate">Occupancy Rate:</label>
+        <input type="number" id="occupancy_rate" name="occupancy_rate" required><br>
+
+        <label for="asking_price">Asking Price:</label>
+        <input type="number" id="asking_price" name="asking_price" required><br>
+
+        <label for="population_growth">Population Growth:</label>
+        <input type="text" id="population_growth" name="population_growth"><br>
+
+        <label for="job_growth">Job Growth:</label>
+        <input type="text" id="job_growth" name="job_growth"><br>
+
+        <label for="crime_rate_index">Crime Rate Index:</label>
+        <input type="text" id="crime_rate_index" name="crime_rate_index"><br>
+
+        <label for="school_rating">School Rating:</label>
+        <input type="text" id="school_rating" name="school_rating"><br>
+
+        <label for="market_cap_rate">Market Cap Rate:</label>
+        <input type="text" id="market_cap_rate" name="market_cap_rate"><br>
+
+        <label for="recent_sales_comps">Recent Sales Comps:</label>
+        <input type="text" id="recent_sales_comps" name="recent_sales_comps"><br>
+
+        <label for="market_rent">Market Rent:</label>
+        <input type="text" id="market_rent" name="market_rent"><br>
+
+        <button type="submit">Analyze this property</button>
+    </form>
+
+    {% if analysis_output %}
+        <h2>Analysis Result:</h2>
+        <p>{{ analysis_output }}</p>
+    {% endif %}
+</body>
+</html>
