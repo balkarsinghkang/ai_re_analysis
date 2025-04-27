@@ -1,0 +1,95 @@
+You are an expert in real estate underwriting, specializing in multifamily investments. 
+Please help analyze the following property based on the provided and assumed data.
+
+---
+## 📍 Property Information:
+- Property Address: {{ property_address }}
+- Year Built: {{ year_built }}
+- Number of Units: {{ number_of_units }}
+- Current Occupancy Rate: {{ occupancy_rate }}%
+- Asking Price: ${{ asking_price }}
+- Property Type/Class: [Determine automatically based on age and condition]
+
+---
+## 📊 Local Market Information:
+- Population Growth: {{ population_growth or "UNKNOWN" }}
+- Job Growth: {{ job_growth or "UNKNOWN" }}
+- Average School Rating Nearby: {{ school_rating or "UNKNOWN" }}
+- Crime Rate Index: {{ crime_rate_index or "UNKNOWN" }}
+- Market Cap Rate for Similar Assets: {{ market_cap_rate or "UNKNOWN" }}
+- Recent Sales Comps (if available): {{ recent_sales_comps or "UNKNOWN" }}
+- Market Rent for Similar Units: {{ market_rent or "UNKNOWN" }}
+
+If any market data is missing (marked as "UNKNOWN"), intelligently assume realistic values based on the property's neighborhood and city. Clearly **flag any assumptions** you make.
+
+---
+## 🔎 Financial Analysis Instructions:
+
+1. **Cap Rate Analysis**:
+   - Calculate based on provided or estimated Net Operating Income (NOI).
+   
+2. **Loan Suggestion**:
+   - Suggest a loan amount to maintain a DSCR (Debt Service Coverage Ratio) ≥ 1.25.
+   - Assume today's market interest rates (6.0%–7.0%) for a 30-year amortization.
+   
+3. **Cash-on-Cash Return Analysis**:
+   - Ensure minimum target ≥ 7% for year one.
+
+4. **Internal Rate of Return (IRR) and Annual Return**:
+   - Estimate 5-year IRR and Annualized Return.
+   - Target: IRR > 20% and Annual Return > 20% if feasible.
+   
+5. **Sensitivity Analysis**:
+   - Show results if occupancy drops by 5%.
+   - Show results if market rents drop by 5%.
+
+6. **Value-Add Scenarios**:
+   - Provide analysis for three options:
+     - Light Renovations (basic upgrades)
+     - Medium Renovations (interior + exterior refresh)
+     - Stabilized (no major renovations)
+
+---
+## 🧠 Output Format:
+
+### 1. Executive Summary
+- Brief deal overview (property class, opportunity, market outlook)
+
+### 2. Assumptions
+- List clearly any assumed market data or financial figures.
+
+### 3. Financial Metrics Table
+| Metric | Value |
+|:------|:------|
+| Cap Rate | % |
+| Suggested Loan Amount | $ |
+| DSCR | x |
+| Cash on Cash Return | % |
+| IRR (5-year) | % |
+| Annualized Return | % |
+
+### 4. Sensitivity Analysis Table
+| Scenario | Cash-on-Cash Return | DSCR |
+|:---------|:--------------------|:----|
+| Occupancy drops 5% | % | x |
+| Rents drop 5% | % | x |
+
+### 5. Value-Add Potential Table
+| Scenario | Estimated Costs | Projected Rent Growth | New Value |
+|:---------|:----------------|:----------------------|:---------|
+| Light Renovation | $ | % | $ |
+| Medium Renovation | $ | % | $ |
+| Stabilized | $ | % | $ |
+
+---
+## 🔥 Special Instructions:
+- Always assume conservatively if data is missing.
+- Be concise and structured — no extra opinions or storytelling.
+- Use bullet points and tables where possible for clarity.
+- End with a brief 3-line investment recommendation (Buy, Watch, or Pass).
+
+---
+
+## Example Final Output Style: 
+[Make it look like a professional broker/deal team underwriting memo.]
+
